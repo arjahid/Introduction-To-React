@@ -6,15 +6,24 @@ import Todo from "./Todo";
 import Actor from "./Actor";
 
 function App() {
-  const actors=['Bapparaj','Manna','Shakib','Salman','Shuvo']
+  const actors=['Bapparaj','Manna','Shakib','Salman','Shuvo'];
+  const singer=[
+    {name:'Manna',age:50},
+    {name:'Shakib',age:40},
+    {name:'Salman',age:30},
+    {name:'Shuvo',age:20},
+
+  ]
 
   return (
     <>
       <h1>Vite + React</h1>
+    {
+      singer.map((singer, index) => <Singer key={index} singer={singer} />)
+
+    }
+
       <Actor name={"Bapparaj"}></Actor>
-      {
-        actors.map(actor => <Actor name={actor}></Actor>)
-      }
        {/* <Todo task="learn react"></Todo> */}
       {/* <Todo task="Trt jsx" isDone={true}></Todo>
       <Todo task="core concept"></Todo>

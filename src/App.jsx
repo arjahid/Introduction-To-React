@@ -3,14 +3,20 @@ import reactLogo from "./assets/react.svg";
 import viteLogo from "/vite.svg";
 import "./App.css";
 import Todo from "./Todo";
+import Actor from "./Actor";
 
 function App() {
-  const [count, setCount] = useState(0);
+  const actors=['Bapparaj','Manna','Shakib','Salman','Shuvo']
 
   return (
     <>
-      <h1>Vite + React</h1> <Todo task="learn react"></Todo>
-      <Todo task="Trt jsx" isDone={true}></Todo>
+      <h1>Vite + React</h1>
+      <Actor name={"Bapparaj"}></Actor>
+      {
+        actors.map(actor => <Actor name={actor}></Actor>)
+      }
+       {/* <Todo task="learn react"></Todo> */}
+      {/* <Todo task="Trt jsx" isDone={true}></Todo>
       <Todo task="core concept"></Todo>
       <something name="mobile"></something>
       <something name="laptop"></something>
@@ -19,7 +25,7 @@ function App() {
       <Person></Person>
       <Developer name="jahid"></Developer>
       <Developer name="Hasab"></Developer>
-      <Developer name="asha"></Developer>
+      <Developer name="asha"></Developer> */}
     </>
   );
 }

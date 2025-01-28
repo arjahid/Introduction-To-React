@@ -1,1 +1,3 @@
-<div></div>
+<div>
+    {isLoggin && <adminPanel />}
+</div>
